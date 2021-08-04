@@ -30,15 +30,15 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: for mvn dependency check
+        run: ./gradlew dependencyCheckAnalyze
       
       - uses: t0rchwo0d/owasp-dependecy-action@main
         with:
-          Project-Name: t0rchwo0d/NodeGoat
+          Project-Name: t0rchwo0d/VulnerableApp
       
       - uses: actions/upload-artifact@v2
         with:
-          path: ${{ github.workspace }}/reports/ 
+          path: |
+            ${{ github.workspace }}/reports/
+            ${{ github.workspace }}/target/
