@@ -41,4 +41,4 @@ jobs:
         with:
           path: |
             ${{ github.workspace }}/reports/
-            ${{ github.workspace }}/target/
+            ${{ github.workspace }}/target/ 
