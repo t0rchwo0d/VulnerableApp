@@ -2,6 +2,6 @@ version: 2
 updates:
   - package-ecosystem: "gradle"
     # path to build.gradle
-    directory: "/whatever"
+    directory: "/"
     schedule:
       interval: "daily"
